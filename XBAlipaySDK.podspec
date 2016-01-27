@@ -14,14 +14,14 @@ s.frameworks        = 'CoreTelephony', 'SystemConfiguration'
 s.default_subspec   = 'Core'
 
 s.subspec "Core" do |core|
-core.resources    = 'AlipaySDK.bundle'
-core.vendored_frameworks = 'AlipaySDK.framework'
-core.public_header_files = 'AlipaySDK.framework/Headers/**/*.h'
+core.resources    = 'AlipaySDK/AlipaySDK.bundle'
+core.vendored_frameworks = 'AlipaySDK/AlipaySDK.framework'
+core.public_header_files = 'AlipaySDK/AlipaySDK.framework/Headers/**/*.h'
 end
 
-# s.subspec "SSL" do |ssl|
-#  ssl.dependency 'AlipaySDK-2.0/Core'
-# ssl.dependency 'OpenSSL'
+#s.subspec "SSL" do |ssl|
+#ssl.dependency 'AlipaySDK-2.0/Core'
+#ssl.dependency 'OpenSSL'
 #end
 
 end
