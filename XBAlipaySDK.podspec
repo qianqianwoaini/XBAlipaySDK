@@ -27,7 +27,7 @@ s.vendored_libraries = 'AliSDKDemo/libcrypto.a', 'AliSDKDemo/libssl.a'
 
 s.subspec "openssl" do |ssl|
   ssl.source_files = "AliSDKDemo/AliSDKDemo/openssl"
-  ssl.header_dir = "AliSDKDemo/AliSDKDemo/openssl"
+  ssl.header_dir = "openssl"
 end
 
 end
