@@ -12,16 +12,16 @@ s.source            = { :git => "https://github.com/qianqianwoaini/XBAlipaySDK.g
 s.frameworks        = 'CoreTelephony', 'SystemConfiguration'
 
 
-s.resources    = 'AliSDKDemo/AlipaySDK.bundle'
-s.vendored_frameworks = 'AliSDKDemo/AlipaySDK.framework'
-s.public_header_files = 'AliSDKDemo/AlipaySDK.framework/Headers/**/*.h'
+s.resources    = 'AliSDK/AlipaySDK.bundle'
+s.vendored_frameworks = 'AliSDK/AlipaySDK.framework'
+s.public_header_files = 'AliSDK/AlipaySDK.framework/Headers/**/*.h'
 
 
-#  s.subspec 'Security' do |ss|
-#    ss.source_files = 'AFNetworking/AFSecurityPolicy.{h,m}'
-#    ss.public_header_files = 'AFNetworking/AFSecurityPolicy.h'
-#    ss.frameworks = 'Security'
-#  end
+s.subspec 'Order' do |ss|
+ss.source_files = 'AliSDK/AliSDKDemo/AliSDKDemo/Order.{h,m}'
+ss.public_header_files = 'AliSDK/AliSDKDemo/AliSDKDemo/Order.h'
+ss.frameworks = 'Foundation'
+end
 
 #s.subspec "SSL" do |ssl|
 #ssl.dependency 'AlipaySDK-2.0/Core'
