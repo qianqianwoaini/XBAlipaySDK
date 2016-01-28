@@ -11,6 +11,7 @@ s.requires_arc      = true
 
 s.source            = { :git => "https://github.com/qianqianwoaini/XBAlipaySDK.git", :tag => "#{s.version}" }
 s.frameworks        = 'CoreTelephony', 'SystemConfiguration'
+s.libraries         = 'z', 'c++'
 
 
 s.resources    = 'AlipaySDK.bundle'
