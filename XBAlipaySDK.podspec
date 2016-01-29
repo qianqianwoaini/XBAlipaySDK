@@ -11,23 +11,22 @@ s.requires_arc      = true
 
 s.source            = { :git => "https://github.com/qianqianwoaini/XBAlipaySDK.git", :tag => "#{s.version}" }
 s.frameworks        = 'CoreTelephony', 'SystemConfiguration'
-
+s.libraries         = 'z', 'c++'
 
 s.resources    = 'AlipaySDK.bundle'
 s.vendored_frameworks = 'AlipaySDK.framework'
 s.public_header_files = 'AlipaySDK.framework/Headers/**/*.h', "AliSDKDemo/AliSDKDemo/openssl/*.h"
 s.vendored_libraries = 'AliSDKDemo/libcrypto.a', 'AliSDKDemo/libssl.a'
 
-#s.subspec "AliPay-Extend" do |ae|
-#    ae.source_files = "AliPay-Extend"
-#    ae.subspec "Util" do |u|
-#      u.source_files = "AliPay-Extend/Util"
-#    end
-#  end
 
 s.subspec "openssl" do |ssl|
-  ssl.source_files = "AliSDKDemo/AliSDKDemo/openssl"
-  ssl.header_dir = "AliSDKDemo/AliSDKDemo/openssl"
+    ssl.source_files = "AliSDKDemo/AliSDKDemo/openssl"
+    ssl.header_dir = "openssl"
+end
+
+
+s.subspec "Util" do |u|
+    u.source_files = "AliSDKDemo/AliSDKDemo/Util"
 end
 
 end
